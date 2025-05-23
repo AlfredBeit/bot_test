@@ -18,7 +18,6 @@ from groq import Groq
 
 # === CONFIGURATION ===
 API_TOKEN = "7620936066:AAERVNuOoIxzZbl4MuIjzeWH3XMyFE4ko7c"
-GROQ_API_KEY = "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"
 
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher(storage=MemoryStorage())
