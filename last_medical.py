@@ -21,8 +21,8 @@ API_TOKEN = "7620936066:AAERVNuOoIxzZbl4MuIjzeWH3XMyFE4ko7c"
 
 bot = Bot(token=API_TOKEN)
 dp = Dispatcher(storage=MemoryStorage())
-client = Groq(api_key=GROQ_API_KEY)
-
+#client = Groq(api_key=GROQ_API_KEY)
+client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 # === FSM STATE ===
 class CompareStates(StatesGroup):
     waiting_for_pdfs = State()
