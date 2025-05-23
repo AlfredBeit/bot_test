@@ -108,10 +108,10 @@ async def pdf_received(message: types.Message, state: FSMContext):
         user_files[user_id] = []
         await state.clear()
 
-# === ЗАПУСК В JUPYTER ===
-nest_asyncio.apply()
-logging.basicConfig(level=logging.INFO)
-await dp.start_polling(bot)
+if __name__ == "__main__":
+    nest_asyncio.apply()
+    logging.basicConfig(level=logging.INFO)
+    asyncio.run(dp.start_polling(bot))
 
 
 # In[ ]:
