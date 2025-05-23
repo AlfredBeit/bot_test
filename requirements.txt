@@ -1,0 +1,6 @@
+aiogram==3.4.1
+markdown2
+PyMuPDF
+weasyprint
+nest_asyncio
+groq
