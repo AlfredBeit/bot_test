@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[4]:
-
-
 import os
 import asyncio
 import logging
@@ -113,7 +107,7 @@ if __name__ == "__main__":
     asyncio.run(dp.start_polling(bot))
 
 
-# In[ ]:
+
 
 
 
