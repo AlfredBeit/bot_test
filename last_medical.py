@@ -11,12 +11,10 @@ from aiogram.fsm.state import StatesGroup, State
 from groq import Groq
 
 # === CONFIGURATION ===
-API_TOKEN = "7620936066:AAERVNuOoIxzZbl4MuIjzeWH3XMyFE4ko7c"
-
-bot = Bot(token=API_TOKEN)
+bot = Bot(token=os.getenv("API_TOKEN"))
 dp = Dispatcher(storage=MemoryStorage())
-#client = Groq(api_key=GROQ_API_KEY)
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+openai.api_key =  os.getenv("openai_token")
 # === FSM STATE ===
 class CompareStates(StatesGroup):
     waiting_for_pdfs = State()
@@ -53,8 +51,8 @@ def compare_texts(text1, text2):
     Анализ 2:
     {text2}
 """
-    response = client.chat.completions.create(
-        model="llama3-70b-8192",
+    response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
         messages=[
             {"role": "system", "content": "Ты врач общей практики, отвечаешь на русском языке."},
             {"role": "user", "content": prompt}
