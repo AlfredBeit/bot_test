@@ -9,6 +9,8 @@ from aiogram.fsm.storage.memory import MemoryStorage
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import StatesGroup, State
 from groq import Groq
+import openai
+
 
 # === CONFIGURATION ===
 bot = Bot(token=os.getenv("API_TOKEN"))

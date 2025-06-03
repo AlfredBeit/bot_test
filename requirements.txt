@@ -4,3 +4,4 @@ PyMuPDF
 weasyprint
 nest_asyncio
 groq    
+openai==0.28
