@@ -1,3 +1,3 @@
-worker: python last_medical.py
+worker: python last_medical.py 
 
 
